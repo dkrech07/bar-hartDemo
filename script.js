@@ -6,15 +6,15 @@ var canvas = document.getElementById('canvas');
 // получаем указатель на контекст рисования
 var c = canvas.getContext('2d');
 
-// рисуем
-c.fillStyle = "gray";
+// рисуем фон
+c.fillStyle = "white";
 c.fillRect(0, 0, 500, 500);
 
 // рисуем данные
 c.fillStyle = "blue";
 for (var i = 0; i < data.length; i++) {
   var dp = data[i];
-  c.fillRect(25 + i * 100, 500 - dp * 5 - 30, 50, dp * 5);
+  c.fillRect(40 + i * 100, 460 - dp * 5, 50, dp * 5);
 }
 
 // рисуем осевые линии
@@ -37,7 +37,8 @@ for (var i = 0; i < 6; i++) {
 }
 
 var labels = ["JAN", "FEB", "MAR", "APR", "MAY"];
-// выводим контекст
+
+// выводим текст
 for (var i = 0; i < 5; i++) {
   c.fillText(labels[i], 50 + i * 100, 475);
 }
